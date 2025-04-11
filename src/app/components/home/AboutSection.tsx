@@ -1,4 +1,5 @@
 import { openSans } from "@/app/layout";
+import companyImage from "@/app/assets/company-image.png"
 
 const AboutSection: React.FC = () => {
 
@@ -20,6 +21,19 @@ const AboutSection: React.FC = () => {
                         <h3 className="text-primary text-xl font-semibold max-w-53 opacity-80">
                             STRENGTH YOU CAN BUILD ON
                         </h3>
+
+                        <div className="card bg-neutral w-full rounded-none gap-4">
+                            <figure>
+                                <img
+                                    src={companyImage.src}
+                                    alt="company" />
+                            </figure>
+                            <div className="card-body p-0">
+                                <p className={"text-sm/6 text-base-content " + openSans.className}>
+                                    From top-grade cement to premium building materials, Ubotex Limited is your trusted partner in construction. With a commitment to quality, reliability, and efficiency, we provide the essentials that bring your projects to life on time and with excellence.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
