@@ -3,6 +3,7 @@ import targetDartIcon from "@/app/assets/target-dart-icon.png"
 import eyeIcon from "@/app/assets/eye-icon.png"
 import trophyIcon from "@/app/assets/trophy-icon.png"
 import Image, { StaticImageData } from "next/image";
+import philosophySectionBG from "@/app/assets/philosophy-section-bg.png"
 import React from "react";
 
 interface CardProps {
@@ -36,8 +37,9 @@ const PhilosophySection: React.FC = () => {
 
     return (
         <>
-            <section className={"bg-neutral flex flex-col  py-9 md:py-10 px-9 lg:px-0 " + openSans.className}>
-                <div className="flex flex-col md:flex-row items-center md:items-stretch lg:items-center justify-center gap-6 lg:gap-7">
+            <section className={`relative bg-neutral md:bg-primary flex flex-col py-9 md:py-10 xl:py-17.5 px-9 xl:px-39 ` + openSans.className}>
+                <img src={philosophySectionBG.src} alt="background vector" className="hidden md:block top-0 left-0 absolute size-full object-cover"/>
+                <div className="md:bg-primary flex flex-col md:flex-row items-center md:items-stretch lg:items-center justify-center gap-6 lg:gap-7 md:py-16 lg:py-20 xl:py-25 z-10">
                     <Card
                         title="OUR MISSION"
                         content="At Ubotex Limited, we drive corporate success by anticipating and exceeding customer needs through innovation, strategic excellence, and an unwavering commitment to sustainable, exceptional service."
