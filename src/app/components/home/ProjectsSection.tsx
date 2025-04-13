@@ -34,7 +34,8 @@ const ProjectsSection: React.FC = () => {
             <section className="flex flex-col 
             gap-8 md:gap-12 lg:gap-14 xl:gap-17.5 
             px-9 md:pl-16 lg:pl-24 xl:pl-32.5 md:pr-0 
-            py-15 md:py-0">
+            py-15 md:py-0
+            md:mb-20 lg:mb-40 xl:mb-61">
                 <div className="md:bg-[url(assets/projects-section-bg.png)] bg-cover bg-center flex flex-col 
                 gap-2 md:gap-4 lg:gap-6 xl:gap-8 
                 md:pt-20 lg:pt-40 xl:pt-61">
