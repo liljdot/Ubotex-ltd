@@ -5,6 +5,7 @@ import TrustedSection from "./components/home/TrustedSection";
 import ServicesSection from "./components/home/ServicesSection";
 import PhilosophySection from "./components/home/PhilosophySection";
 import ProjectsSection from "./components/home/ProjectsSection";
+import TestimonialsSection from "./components/home/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <ServicesSection />
         <PhilosophySection />
         <ProjectsSection />
+        <TestimonialsSection />
       </div>
     </main>
   );
