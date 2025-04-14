@@ -7,6 +7,7 @@ import PhilosophySection from "./components/home/PhilosophySection";
 import ProjectsSection from "./components/home/ProjectsSection";
 import TestimonialsSection from "./components/home/TestimonialsSection";
 import GallerySection from "./components/home/GallerySection";
+import ContactSection from "./components/home/ContactSection";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <ProjectsSection />
         <TestimonialsSection />
         <GallerySection />
+        <ContactSection />
       </div>
     </main>
   );

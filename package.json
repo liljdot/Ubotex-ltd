@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/webpack-env": "^1.18.8",
+    "@vis.gl/react-google-maps": "^1.5.2",
     "daisyui": "^5.0.17",
     "next": "15.2.5",
     "react": "^19.0.0",
