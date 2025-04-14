@@ -10,7 +10,7 @@ const ContactSection: React.FC = () => {
             <section className="flex flex-col gap-16 xl:gap-50">
             <h1 className="text-primary text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-7xl font-semibold opacity-80 text-center">CONTACT US</h1>
 
-                <div className="relative h-50 xl:h-175">
+                <div className="relative h-100 xl:h-175">
                     <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}>
                         <Map
                             style={{ width: '100%', height: '100%' }}
