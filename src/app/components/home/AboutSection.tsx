@@ -6,7 +6,7 @@ const AboutSection: React.FC = () => {
 
     return (
         <>
-            <section className="bg-neutral px-17.5 md:px-25 lg:px-40 xl:px-61.5 py-15 md:py-24 lg:py-32 xl:py-40">
+            <section id="about" className="target_section bg-neutral px-17.5 md:px-25 lg:px-40 xl:px-61.5 py-15 md:py-24 lg:py-32 xl:py-40">
                 <div className="flex flex-col gap-15 md:gap-20 lg:gap-30 xl:gap-40">
                     <div className="flex flex-col gap-4 md:gap-8 lg:gap-12 xl:gap-15">
                         <h3 className="text-primary text-xl md:text-3xl lg:text-5xl xl:text-7xl font-semibold xl:font-medium max-w-53 md:max-w-96 lg:max-w-128 xl:max-w-158.5 opacity-80">

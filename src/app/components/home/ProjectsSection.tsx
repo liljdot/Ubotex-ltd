@@ -31,7 +31,7 @@ const ProjectsSection: React.FC = () => {
 
     return (
         <>
-            <section className="flex flex-col 
+            <section id="projects" className="target_section flex flex-col 
             gap-8 md:gap-12 lg:gap-14 xl:gap-17.5 
             px-9 md:pl-16 lg:pl-24 xl:pl-32.5 md:pr-0 
             py-15 md:py-0

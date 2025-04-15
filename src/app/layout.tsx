@@ -15,7 +15,7 @@ export const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Ubotex Nigeria",
+  title: "Ubotex Limited",
   description: "From quality building materials to exceptional hospitality and fine wines, Ubotex Limited turns aspirations into reality. Whether you're constructing, unwinding, or celebrating, we deliver excellence at every step.",
 };
 

@@ -30,7 +30,7 @@ const ServicesSection: React.FC = () => {
 
     return (
         <>
-            <section className="bg-neutral flex flex-col gap-4 md:gap-8 lg:gap-12 xl:gap-15 px-9 md:px-16 lg:px-24 xl:px-32 py-15 md:py-20 lg:py-28 xl:py-40">
+            <section id="services" className="target_section bg-neutral flex flex-col gap-4 md:gap-8 lg:gap-12 xl:gap-15 px-9 md:px-16 lg:px-24 xl:px-32 py-15 md:py-20 lg:py-28 xl:py-40">
                 <h1 className="text-primary text-center text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-7xl font-semibold">OUR SERVICES</h1>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-x-5 xl:gap-x-3 lg:gap-y-10 xl:gap-y-14 mx-auto">
