@@ -5,7 +5,6 @@ import headerLogo from "@/app/assets/header-logo.png"
 import Image from "next/image"
 import Link from "next/link"
 import { Open_Sans } from "next/font/google"
-import DomainLink from "./DomainLink"
 import { useEffect, useState } from "react"
 
 const openSans = Open_Sans({

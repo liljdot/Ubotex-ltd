@@ -5,8 +5,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const playfairDisplay = Playfair_Display({
-    variable: "--font-playfair-display",
-    subsets: ["latin"]
+  variable: "--font-playfair-display",
+  subsets: ["latin"]
 })
 
 export const openSans = Open_Sans({
@@ -16,7 +16,7 @@ export const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: "Ubotex Limited",
-  description: "From quality building materials to exceptional hospitality and fine wines, Ubotex Limited turns aspirations into reality. Whether you're constructing, unwinding, or celebrating, we deliver excellence at every step.",
+  description: "Incorporated in 2002, Ubotex Limited is a leading Nigerian firm specializing in cement distribution, building materials, and transport haulage. Committed to excellence, we deliver reliable, efficient, and innovative services across a wide network. Backed by an experienced team, we strive to exceed customer expectations and lead in distribution and transportation across the South-South and beyond."
 };
 
 export default function RootLayout({
