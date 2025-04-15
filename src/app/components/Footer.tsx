@@ -1,7 +1,7 @@
 import { Open_Sans, Inter } from "next/font/google";
 import ActionButton from "./ActionButton";
 import Image from "next/image";
-// import footerLogo from "@/app/assets/footer-logo.png";
+import footerLogo from "@/app/assets/footer-logo.png";
 import { playfairDisplay } from "../layout";
 
 const openSans = Open_Sans({
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
 
                                 <div className="flex flex-col justify-end items-end gap-3.5 md:gap-8 xl:gap-11.5">
                                     <figure className="w-23 md:w-52 xl:w-78">
-                                        {/* <Image src={footerLogo} alt="Ubotex logo" className="w-full" /> */}
+                                        <Image src={footerLogo} alt="Ubotex logo" className="w-full" />
                                     </figure>
 
                                     <div className="flex flex-col gap-1 text-right">
