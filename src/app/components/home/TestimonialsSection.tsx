@@ -1,11 +1,18 @@
 import { openSans } from "@/app/layout";
 import davidOImage from "@/app/assets/david-o-image.jpg"
+import graceMImage from "@/app/assets/grace-m-image.jpg"
+import tundeAImage from "@/app/assets/tunde-a-image.jpg"
+import { ReactNode } from "react";
+import { StaticImageData } from "next/image";
 
 interface TestimonialCardProps {
-
+    name: string
+    title: string
+    children: ReactNode
+    image: StaticImageData
 }
 
-const TestimonialCard: React.FC<TestimonialCardProps> = () => {
+const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, title, children, image }) => {
 
     return (
         <>
@@ -14,18 +21,18 @@ const TestimonialCard: React.FC<TestimonialCardProps> = () => {
                     <div className="flex justify-start items-center gap-2">
                         <div className="avatar">
                             <div className="w-16 rounded-full">
-                                <img src={davidOImage.src} />
+                                <img src={image.src} />
                             </div>
                         </div>
 
                         <div className="flex flex-col">
-                            <h6 className="text-sm xl:text-lg font-semibold">David O.</h6>
-                            <p className="text-xs md:text-sm">Construction Manager</p>
+                            <h6 className="text-sm xl:text-lg font-semibold">{name}</h6>
+                            <p className="text-xs md:text-sm">{title}</p>
                         </div>
                     </div>
 
                     <p className="text-sm">
-                        Ubotex has been our go-to supplier for premium cement and building materials. Their reliability and product quality have made a huge difference in our projects.
+                        {children}
                     </p>
                 </div>
             </div>
@@ -44,24 +51,16 @@ const TestimonialsSection: React.FC = () => {
                 </div>
 
                 <div className="flex flex-row gap-2 md:gap-3 lg:gap-4 xl:gap-5 overflow-x-scroll">
-                    <TestimonialCard>
-
+                    <TestimonialCard name="Grace M." title="Interior Designer" image={graceMImage}>
+                        "Excellent service and top-quality materials! The doors and ceiling boards we purchased from Ubotex were exactly what we needed for our renovation project."
                     </TestimonialCard>
 
-                    <TestimonialCard>
-
+                    <TestimonialCard name="David O." title="Construction Manager" image={davidOImage}>
+                        “Ubotex has been our go-to supplier for premium cement and building materials. Their reliability and product quality have made a huge difference in our projects.”
                     </TestimonialCard>
 
-                    <TestimonialCard>
-
-                    </TestimonialCard>
-
-                    <TestimonialCard>
-
-                    </TestimonialCard>
-
-                    <TestimonialCard>
-
+                    <TestimonialCard name="Tunde A." title="Real Estate Developer" image={tundeAImage}>
+                        "From cement to roofing materials, Ubotex provides everything we need with outstanding customer service. Highly recommended!"
                     </TestimonialCard>
                 </div>
             </section>
