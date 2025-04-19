@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Open_Sans } from "next/font/google"
 import { useEffect, useState } from "react"
+import DomainLink from "./DomainLink"
 
 const openSans = Open_Sans({
     variable: "--font-open-sans",
@@ -59,7 +60,7 @@ const Navbar: React.FC = () => {
                             tabIndex={0}
                             className={`menu menu-sm dropdown-content bg-neutral text-primary gap-3 z-1 mt-3 min-w-40 w-fit shadow pl-3 pr-5 py-4 ${openSans.className}`}
                         >
-                            <li><a className="text-base p-0">Home</a></li>
+                            <li><DomainLink subDomain="" className="text-base p-0">Home</DomainLink></li>
                             <li><a onClick={() => scrolltoSection("services")} className="text-base p-0">Services</a></li>
                             <li><a onClick={() => scrolltoSection("projects")} className="text-base p-0">Projects</a></li>
                             <li><a onClick={() => scrolltoSection("about")} className="text-base p-0">About Us</a></li>
@@ -67,7 +68,7 @@ const Navbar: React.FC = () => {
                     </div>
 
                     <ul className={`menu menu-horizontal gap-6 text-neutral px-1 hidden md:inline-flex ${openSans.className}`}>
-                        <li><a className="xl:text-lg p-0">Home</a></li>
+                        <li><DomainLink subDomain="" className="xl:text-lg p-0">Home</DomainLink></li>
                         <li className={`${sectionInView == "services" && "relative after:absolute after:bg-primary after:w-full after:h-1 after:-bottom-10"}`}><a onClick={() => scrolltoSection("services")} className={`${sectionInView == "services" && "text-primary"} xl:text-lg p-0`}>Services</a></li>
                         <li className={`${sectionInView == "projects" && "relative after:absolute after:bg-primary after:w-full after:h-1 after:-bottom-10"}`}><a onClick={() => scrolltoSection("projects")} className={`${sectionInView == "projects" && "text-primary"} xl:text-lg p-0`}>Projects</a></li>
                         <li className={`${sectionInView == "about" && "relative after:absolute after:bg-primary after:w-full after:h-1 after:-bottom-10"}`}><a onClick={() => scrolltoSection("about")} className={`${sectionInView == "about" && "text-primary"} xl:text-lg p-0`}>About Us</a></li>
