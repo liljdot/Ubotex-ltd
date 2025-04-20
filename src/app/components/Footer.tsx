@@ -3,6 +3,7 @@ import ActionButton from "./ActionButton";
 import Image from "next/image";
 import footerLogo from "@/app/assets/footer-logo.png";
 import { playfairDisplay } from "../layout";
+import { whatsappContact } from "../data";
 
 const openSans = Open_Sans({
     variable: "--font-open-sans",
@@ -29,7 +30,7 @@ const Footer: React.FC = () => {
 
                                 <p className={"md:hidden text-[10px] opacity-80 font-normal " + inter.className}>Feel free to send us your questions or request a free consultation.</p>
 
-                                <ActionButton to="" className="w-fit">Contact Us</ActionButton>
+                                <ActionButton to={whatsappContact} className="w-fit">Contact Us</ActionButton>
                             </div>
 
                             {/* center  */}

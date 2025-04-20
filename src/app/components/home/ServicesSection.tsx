@@ -2,6 +2,7 @@ import serviceCardBG from "@/app/assets/service-card-bg.png"
 import ActionButton from "../ActionButton"
 import { openSans } from "@/app/layout"
 import { ReactNode } from "react"
+import { whatsappContact } from "@/app/data"
 
 interface CardProps {
     title: string
@@ -18,7 +19,7 @@ const Card: React.FC<CardProps> = ({ bgFlip, title, children }) => {
                     <h2 className="card-title block text-sm md:text-base lg:text-lg xl:text-lg text-primary text-center md:text-left font-semibold">{title}</h2>
                     <p className={"text-sm xl:text-xs text-base-content text-center md:text-left " + openSans.className}>{children}</p>
                     <div className="card-actions justify-center md:justify-start md:my-4 xl:my-7.5">
-                        <ActionButton to="" className="btn btn-primary">Contact Us</ActionButton>
+                        <ActionButton to={whatsappContact} className="btn btn-primary">Contact Us</ActionButton>
                     </div>
                 </div>
             </div>

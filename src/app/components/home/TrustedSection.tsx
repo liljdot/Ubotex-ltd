@@ -1,5 +1,6 @@
 import trustedSectionBG from "@/app/assets/trusted-section-bg.png"
 import ActionButton from "../ActionButton";
+import { whatsappContact } from "@/app/data";
 
 const TrustedSection: React.FC = () => {
 
@@ -14,7 +15,7 @@ const TrustedSection: React.FC = () => {
                     </div>
 
                     <div className="flex justify-center items-center">
-                        <ActionButton to="" className="bg-primary text-neutral">Contact Us</ActionButton>
+                        <ActionButton to={whatsappContact} className="bg-primary text-neutral">Contact Us</ActionButton>
                     </div>
                 </div>
 

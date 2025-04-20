@@ -1,6 +1,7 @@
 import heroBG from "@/app/assets/hero-bg.png"
 import { openSans } from "@/app/layout";
 import ActionButton from "../ActionButton";
+import { whatsappContact } from "@/app/data";
 
 const HeroSection: React.FC = () => {
 
@@ -18,7 +19,7 @@ const HeroSection: React.FC = () => {
                     </div>
 
                     <div className="flex justify-center items-center">
-                        <ActionButton to="" className="bg-primary text-neutral">Contact Us</ActionButton>
+                        <ActionButton to={whatsappContact} className="bg-primary text-neutral">Contact Us</ActionButton>
                     </div>
                 </div>
 
