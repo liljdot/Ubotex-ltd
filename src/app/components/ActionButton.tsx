@@ -14,6 +14,12 @@ interface Props {
     to: string
 }
 
+interface ClickActionButtonProps {
+    className?: string
+    children: ReactNode
+    click: () => void
+}
+
 const ActionButton: React.FC<Props> = ({ className, children, to }) => {
 
     return (
@@ -23,7 +29,16 @@ const ActionButton: React.FC<Props> = ({ className, children, to }) => {
     )
 }
 
-export const DomainActionButton: React.FC<Props> = ({className, children, to}) => {
+export const ClickActionButton: React.FC<ClickActionButtonProps> = ({ className, children, click }) => {
+
+    return (
+        <button onClick={click} className={openSans.className + " btn min-w-26.5 md:min-w-36 lg:min-w-44 text-[0.6rem] md:text-sm lg:text-base font-normal h-8 md:h-12 lg:h-14 py-2 md:py-3 lg:py-4 border-none shadow-none rounded-full hover:scale-105 transition-all ease-in-out duration-300 " + className}>
+            {children}
+        </button>
+    )
+}
+
+export const DomainActionButton: React.FC<Props> = ({ className, children, to }) => {
 
     return (
         <DomainLink subDomain={to} className={openSans.className + " btn min-w-26.5 md:min-w-36 lg:min-w-44 text-[0.6rem] md:text-sm lg:text-base font-normal h-8 md:h-12 lg:h-14 py-2 md:py-3 lg:py-4 border-none shadow-none rounded-full hover:scale-105 transition-all ease-in-out duration-300 " + className}>

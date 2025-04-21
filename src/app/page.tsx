@@ -12,7 +12,7 @@ import ContactSection from "./components/home/ContactSection";
 export default function Home() {
   return (
     <main className="p-0 bg-neutral w-full">
-      <div className="max-w-450 mx-auto">
+      <div className="relative max-w-450 mx-auto">
         <HeroSection />
         <AboutSection />
         <TrustedSection />
