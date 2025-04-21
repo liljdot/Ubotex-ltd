@@ -16,7 +16,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, title, children
 
     return (
         <>
-            <div className={"card w-90 shrink-0 shadow-sm text-base-content " + openSans.className}>
+            <div className={"card w-90 shrink-0 shadow-sm text-base-content mx-auto " + openSans.className}>
                 <div className="card-body gap-2 md:gap-4 px-8 xl:px-4 py-5">
                     <div className="flex justify-start items-center gap-2">
                         <div className="avatar">
