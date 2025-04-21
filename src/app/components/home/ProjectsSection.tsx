@@ -25,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, setmodalIsOpen, title,
 
     return (
         <>
-            <div className="card shrink-0 w-full max-w-103 xl:w-135 xl:max-w-135 shadow-sm rounded-none pb-4 xl:pb-8">
+            <div className="card shrink-0 w-full max-w-103 xl:w-135 xl:max-w-135 shadow-sm rounded-none pb-4 xl:pb-8 self-stretch mx-auto">
                 <figure>
                     <img
                         src={image.src}
