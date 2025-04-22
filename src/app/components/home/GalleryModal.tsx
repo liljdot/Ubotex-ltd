@@ -16,7 +16,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, setModalIsOpen }) => {
     return (
         <div className="carousel relative w-full h-full">
             <button className="fixed btn bg-transparent border-none shadow-none z-1000" onClick={() => setModalIsOpen(false)}>
-                <CgCloseR className="size-6"/>
+                <CgCloseR className="size-6" />
             </button>
             {images.map((image: StaticImageData, index: number) => (
                 <div key={"gallery-image" + index} id={"slide" + (index + 1)} className="carousel-item justify-center relative w-full h-2/3 md:h-full">
@@ -41,15 +41,17 @@ const Carousel: React.FC<CarouselProps> = ({ images, setModalIsOpen }) => {
     )
 }
 
-const GalleryModal: React.FC<{ setModalIsOpen: (val: boolean) => void, directory: string }> = ({ setModalIsOpen, directory }) => {
-    const importAll = (r: any, folder: string) => { return r.keys().filter((path: string) => path.startsWith(`./${folder}`)).map(r) }
-    const images: StaticImageData[] = importAll(require.context(`/public/gallery`, true, /\.(png|jpe?g)$/), directory)
+const GalleryModal: React.FC<{ setModalIsOpen: (val: boolean) => void, directory: string, images?: StaticImageData[] }> = ({ setModalIsOpen, directory, images }) => {
+    if (!images) {
+        const importAll = (r: any, folder: string) => { return r.keys().filter((path: string) => path.startsWith(`./${folder}`)).map(r) }
+        images = importAll(require.context(`/public/gallery`, true, /\.(png|jpe?g)$/), directory)
+    }
 
     return (
         <>
             <div id="my_modal_1" className="modal modal-top modal-open top-0 left-0 h-full max-h-full pt-17 md:pt-24 lg:pt-24 xl:pt-25">
                 <div className="modal-box w-full max-w-screen h-full px-7">
-                        <Carousel setModalIsOpen={setModalIsOpen} images={images} />
+                    <Carousel setModalIsOpen={setModalIsOpen} images={images!} />
                     {/* <h3 className="font-bold text-lg">Hello!</h3>
                     <p className="py-4">Press ESC key or click the button below to close</p>
                     <div className="modal-action">
