@@ -18,10 +18,12 @@ interface ProjectCardProps {
     image: StaticImageData
     title: string
     date: string
+    directory?: string
     setmodalIsOpen: (val: boolean) => void
+    setProjectDirectory?: (val: string) => void
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ image, setmodalIsOpen, title, date }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ image, setmodalIsOpen, title, date, directory, setProjectDirectory }) => {
 
     return (
         <>
@@ -37,7 +39,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, setmodalIsOpen, title,
                 </div>
 
                 <div className="card-actions self-center">
-                    <ClickActionButton click={() => setmodalIsOpen(true)} className="bg-primary text-neutral">
+                    <ClickActionButton click={() => {
+                        if (setProjectDirectory) {
+                            setProjectDirectory(directory!)
+                        }
+                        setmodalIsOpen(true)
+                    }} className="bg-primary text-neutral">
                         View Gallery
                     </ClickActionButton>
                 </div>
@@ -48,6 +55,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, setmodalIsOpen, title,
 
 const ProjectsSection: React.FC = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false)
+    const [projectDirectory, setProjectDirectory] = useState<string>("")
 
     return (
         <>
@@ -56,7 +64,7 @@ const ProjectsSection: React.FC = () => {
             px-9 md:pl-16 lg:pl-24 xl:pl-32.5 md:pr-0 
             py-15 md:py-0
             md:mb-20 lg:mb-40 xl:mb-61">
-                {modalIsOpen && <GalleryModal setModalIsOpen={setModalIsOpen} />}
+                {modalIsOpen && <GalleryModal directory={projectDirectory} setModalIsOpen={setModalIsOpen} />}
                 <div className="md:bg-[url(assets/projects-section-bg.png)] bg-cover bg-center flex flex-col 
                 gap-2 md:gap-4 lg:gap-6 xl:gap-8 
                 md:pt-20 lg:pt-40 xl:pt-61">
@@ -66,9 +74,9 @@ const ProjectsSection: React.FC = () => {
                 </div>
 
                 <div className="flex flex-col md:flex-row gap-6 md:gap-4 items-center md:overflow-x-scroll">
-                    <ProjectCard title="THE MODEL PRIMARY SCHOOL PROJECT, IKOT ISONG" date="Date of Commission: Friday, April 18th, 2025." setmodalIsOpen={setModalIsOpen} image={project1Image} />
-                    <ProjectCard title="Ibesikpo asuntan LGA Ikot Akpabin" date="Date of Commission: 12th April, 2015" setmodalIsOpen={setModalIsOpen} image={project2Image} />
-                    <ProjectCard title="THE MODEL PRIMARY SCHOOL PROJECT, IKOT ISONG" date="Date of Commission: Friday, April 18th, 2025." setmodalIsOpen={setModalIsOpen} image={project3Image} />
+                    <ProjectCard directory="school" title="THE MODEL PRIMARY SCHOOL PROJECT, IKOT ISONG" date="Date of Commission: Friday, April 18th, 2025." setmodalIsOpen={setModalIsOpen} image={project1Image} setProjectDirectory={setProjectDirectory} />
+                    <ProjectCard directory="akpabin" title="Ibesikpo asuntan LGA Ikot Akpabin" date="Date of Commission: 12th April, 2015" setmodalIsOpen={setModalIsOpen} image={project2Image} setProjectDirectory={setProjectDirectory} />
+                    <ProjectCard directory="school" title="THE MODEL PRIMARY SCHOOL PROJECT, IKOT ISONG" date="Date of Commission: Friday, April 18th, 2025." setmodalIsOpen={setModalIsOpen} image={project3Image} setProjectDirectory={setProjectDirectory} />
                 </div>
             </section>
         </>

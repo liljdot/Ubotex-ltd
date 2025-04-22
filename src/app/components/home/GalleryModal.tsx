@@ -41,11 +41,11 @@ const Carousel: React.FC<CarouselProps> = ({ images, setModalIsOpen }) => {
     )
 }
 
-const GalleryModal: React.FC<{ setModalIsOpen: (val: boolean) => void }> = ({ setModalIsOpen }) => {
-    4
-    const importAll = (r: any) => { return r.keys().map(r) }
-    const images: StaticImageData[] = importAll(require.context("/public/gallery/school", false, /\.(png|jpe?g)$/))
-    console.log(images[1])
+const GalleryModal: React.FC<{ setModalIsOpen: (val: boolean) => void, directory: string }> = ({ setModalIsOpen, directory }) => {
+    const imagesPath = `/public/gallery/${"school"}`
+    const importAll = (r: any, folder: string) => { return r.keys().filter((path: string) => path.startsWith(`./${folder}`)).map(r) }
+    const images: StaticImageData[] = importAll(require.context(`/public/gallery`, true, /\.(png|jpe?g)$/), directory)
+    console.log(images[0])
 
     return (
         <>
