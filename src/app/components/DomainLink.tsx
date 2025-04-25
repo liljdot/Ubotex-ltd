@@ -11,7 +11,6 @@ interface Props {
 
 const DomainLink: React.FC<Props> = ({ className, subDomain, children }) => {
     const [hostname, setHostname] = useState<string>("")
-    console.log(hostname)
     const urlArr = hostname.split(".")
 
     if (urlArr.length < 3) {
