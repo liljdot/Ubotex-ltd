@@ -10,8 +10,6 @@ interface CarouselProps {
 }
 
 const Carousel: React.FC<CarouselProps> = ({ images, setModalIsOpen }) => {
-    const imageHeight = screen.availHeight * 0.7
-    const imageWidth = screen.availWidth * 0.7
 
     return (
         <div className="carousel relative w-full h-full">
