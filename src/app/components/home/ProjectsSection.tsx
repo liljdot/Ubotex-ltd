@@ -70,7 +70,7 @@ const ProjectsSection: React.FC = () => {
                 md:pt-20 lg:pt-40 xl:pt-61">
                     <h1 className="text-primary text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-7xl font-medium">OUR PROJECTS</h1>
 
-                    <p className={"text-xs md:text-sm lg:text-base md:max-w-md xl:max-w-126 text-base-content " + openSans.className}>At UBOTEX, our projects showcase our expertise in cement distribution and high-quality building materials. From residential and commercial developments to large-scale infrastructure, we supply the essential materials that bring these constructions to life. Explore the projects below to see how UBOTEX is shaping the future of construction with strength and reliability</p>
+                    <p className={"text-xs md:text-sm lg:text-base md:max-w-md xl:max-w-126 text-base-content text-justify " + openSans.className}>At UBOTEX, our projects showcase our expertise in cement distribution and high-quality building materials. From residential and commercial developments to large-scale infrastructure, we supply the essential materials that bring these constructions to life. Explore the projects below to see how UBOTEX is shaping the future of construction with strength and reliability</p>
                 </div>
 
                 <div className="flex flex-col md:flex-row gap-6 md:gap-4 items-center md:overflow-x-scroll">

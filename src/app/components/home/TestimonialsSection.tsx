@@ -47,7 +47,7 @@ const TestimonialsSection: React.FC = () => {
             <section className="flex flex-col gap-6 md:gap-8 lg:gap-12 xl:gap-16 md:py-8 lg:py-10 xl:py-12.5">
                 <div className="flex flex-col gap-1 md:gap-2 lg:gap-3 xl:gap-4 px-9 md:px-12 lg:px-20 xl:px-30">
                     <h1 className="text-primary text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-7xl font-semibold">What Our Clients Say</h1>
-                    <p className={"text-base-content text-xs md:text-sm xl:text-base " + openSans.className}>At Ubotex, customer satisfaction is at the heart of everything we do. We take pride in providing high-quality building materials, reliable distribution, and exceptional service. But don’t just take our word for it, hear from our satisfied clients who trust us to deliver the best for their projects.</p>
+                    <p className={"text-base-content text-xs md:text-sm xl:text-base text-justify " + openSans.className}>At Ubotex, customer satisfaction is at the heart of everything we do. We take pride in providing high-quality building materials, reliable distribution, and exceptional service. But don’t just take our word for it, hear from our satisfied clients who trust us to deliver the best for their projects.</p>
                 </div>
 
                 <div className="flex flex-row gap-2 md:gap-3 lg:gap-4 xl:gap-5 overflow-x-scroll">

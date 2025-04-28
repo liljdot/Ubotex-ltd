@@ -13,7 +13,7 @@ const AboutSection: React.FC = () => {
                             WHO ARE WE?
                         </h3>
 
-                        <p className={"text-sm/6 md:text-base " + openSans.className}>
+                        <p className={"text-sm/6 md:text-base text-justify " + openSans.className}>
                             Incorporated in 2002, Ubotex Limited is a leading Nigerian firm specializing in cement distribution, building materials, and transport haulage. Committed to excellence, we deliver reliable, efficient, and innovative services across a wide network. Backed by an experienced team, we strive to exceed customer expectations and lead in distribution and transportation across the South-South and beyond.
                         </p>
                     </div>
